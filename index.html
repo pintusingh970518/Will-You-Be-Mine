@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Will you forever be mine <br> <span> babita 💕</span></h1>
+
+        <div class="heart">💖</div>
+
+        <p>Because my heart feels complete only when you are with me</p>
+
+        <div class="hero-btns">
+
+            <!-- Yes Button -->
+            <button class="btn" onclick="showVideo()">Yes</button>
+
+            <!-- No Button -->
+            <button class="btn No">No</button>
+
+        </div>
+
+        <br>
+
+        <!-- Hidden Video -->
+        <video id="loveVideo" width="200" controls style="display: none;">
+            <source src="love.mp4" type="video/mp4">
+        </video>
+
+    </header>
+
+    <script>
+
+        // No button bhagega
+        let noBtn = document.querySelector(".No");
+
+        noBtn.addEventListener("mouseover", function () {
+
+            let x = Math.random() * 300 - 150;
+            let y = Math.random() * 300 - 150;
+
+            noBtn.style.position = "relative";
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        });
+
+        // Yes button par video
+        function showVideo() {
+
+            let video = document.getElementById("loveVideo");
+
+            // Video dikhana
+            video.style.display = "block";
+
+            // Video play karna
+            video.play();
+        }
+
+    </script>
+
+</body>
+</html>
